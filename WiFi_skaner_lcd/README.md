@@ -1,4 +1,4 @@
-# test_joystick_lcd
+# WiFi_skaner_lcd
 
 связка LuatOS на базе ESP32c3 и модуля Air101-lcd подключенных один к одному
 
