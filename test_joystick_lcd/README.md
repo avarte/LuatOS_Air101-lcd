@@ -14,3 +14,7 @@ center_key = Pin(4,  Pin.IN, Pin.PULL_UP)
 ```
 
 ![внешний вид](tst1.jpg)
+
+## Лицензия
+
+MIT
