@@ -42,9 +42,9 @@ def draw_header():
     tft.text((45, 2), "AHT10 SENSOR", TFT.YELLOW, sysfont, 1)
 
 def draw_labels():
-    # ИСПРАВЛЕНО: Поднято на 3px (было 32→29, 56→53)
-    tft.text((100, 29), "Temp", TFT.WHITE, sysfont, 2)  # ← y=29 (было 32)
-    tft.text((100, 53), "Hum", TFT.WHITE, sysfont, 2)   # ← y=53 (было 56)
+    
+    tft.text((100, 29), "Temp", TFT.WHITE, sysfont, 2)  
+    tft.text((100, 53), "Hum", TFT.WHITE, sysfont, 2)   
 
 def draw_screen_init():
     tft.fill(TFT.BLACK)
@@ -67,14 +67,14 @@ def update_values(temp, hum):
     
     temp_color = get_temp_color(temp)
     
-    # ИСПРАВЛЕНО: Поднято на 3px (было 30→27, 55→52)
+    
     if temp_str != old_temp:
-        tft.fillrect((20, 27), (70, 16), TFT.BLACK)  # ← y=27 (было 30)
+        tft.fillrect((20, 27), (70, 16), TFT.BLACK)  
         tft.text((20, 27), temp_str, temp_color, sysfont, 2)
         old_temp = temp_str
     
     if hum_str != old_hum:
-        tft.fillrect((20, 52), (50, 16), TFT.BLACK)  # ← y=52 (было 55)
+        tft.fillrect((20, 52), (50, 16), TFT.BLACK)  
         tft.text((20, 52), hum_str, TFT.CYAN, sysfont, 2)
         old_hum = hum_str
 
